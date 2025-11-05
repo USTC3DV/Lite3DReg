@@ -7,7 +7,7 @@
 
 </p>
 
-<img width="2064" height="384" alt="3" src="https://github.com/user-attachments/assets/1d0e885b-42c0-43e6-8fc1-c5796dd12b7c" />
+<img width="2064" height="384" alt="3" src="https://github.com/user-attachments/assets/cfa76e8e-cf73-44aa-a658-230e7e1ec5ef" />
 
 #### Lightweight lib for 3D rigid registration and non-registration with robustness and efficiency
 Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh registration library supporting both rigid and non-rigid alignment. It is designed for research and educational purposes, while also serving as a solid foundation for developing advanced 3D applications. Compared to existing geometry and registration libraries (such as  [PCL ](https://pointclouds.org/),[Open3D](http://www.open3d.org/)), Lite3DRegLib is designed to be lightweight while using modern, high-performance, and robust registration algorithms, enabling fast and reliable 3D point cloud and mesh alignment.Designed to be accessible for beginners or users who only need registration results, Lite3DRegLib also includes interactive visualization and user-friendly tools via Gradio, making it easier to explore, analyze, and experiment with 3D data.
@@ -22,35 +22,45 @@ Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh
 - Efficient and Robust:By leveraging our algorithms, Lite3DRegLib significantly outperforms traditional registration methods such as ICP and CPD in terms of speed and robustness.Rigid registration algorithm:[Fast-Robust-ICP](https://github.com/yaoyx689/Fast-Robust-ICP);NonRigid registration algorithm:[spare](https://github.com/yaoyx689/spare).
   
 - Easy and Flexible:Lite3DRegLib provides an interactive interface through Gradio, making it easy for users to visualize 3D registration results in real time. Users can conveniently adjust parameters and settings to explore different configurations, experiment with example datasets, and fine-tune the alignment process, all without writing additional code.
+
+![1](https://github.com/user-attachments/assets/ca99ec1f-3ca9-490f-8fe9-12ae599edc58)
+![2](https://github.com/user-attachments/assets/d0f332f5-80b9-4ea8-bc76-d19ca263e4d3)
+
+
 ### Rigid registration [![arXiv](https://img.shields.io/badge/arXiv-2007.07627-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2007.07627)
 
 <table>
   <tr>
     <td width="50%">
-      <img src="https://github.com/user-attachments/assets/682a2856-bf8b-473a-beb5-2af0ba53698a" style="width:100%; height:auto;">
+      <img src="https://github.com/user-attachments/assets/ca99ec1f-3ca9-490f-8fe9-12ae599edc58" style="width:100%; height:auto;">
     </td>
     <td width="50%">
-      <img src="https://github.com/user-attachments/assets/b6e888ee-1b78-4a6d-87d1-cce5ca33d11a" style="width:100%; height:auto;">
+      <img src="https://github.com/user-attachments/assets/d0f332f5-80b9-4ea8-bc76-d19ca263e4d3" style="width:100%; height:auto;">
     </td>
   </tr>
 </table>
 
+<img width="882" height="784" alt="3" src="https://github.com/user-attachments/assets/220f4a79-221a-4350-86d9-2c633b56d6b2" />
+
+<img width="1090" height="1124" alt="4" src="https://github.com/user-attachments/assets/ffb851c7-a504-442b-8c08-419968203618" />
+<img width="906" height="1098" alt="5" src="https://github.com/user-attachments/assets/7dd9fb53-0556-4879-9b5f-e6c8b2b83335" />
+<img width="972" height="1074" alt="6" src="https://github.com/user-attachments/assets/fc1f11b6-8dab-45c1-ae70-8c1e6666ff34" />
 
 ### Non-rigid registration [![arXiv](https://img.shields.io/badge/arXiv-2405.20188-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2405.20188)
 
 <table>
   <tr>
     <td>
-      <img src="https://github.com/user-attachments/assets/7250cc5a-f452-452d-b3c0-48063566ceae" width="400"/>
+      <img src="https://github.com/user-attachments/assets/220f4a79-221a-4350-86d9-2c633b56d6b2" width="400"/>
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/7770db6a-1ee0-41d8-be7f-660df0109776" width="400"/>
+      <img src="https://github.com/user-attachments/assets/ffb851c7-a504-442b-8c08-419968203618" width="400"/>
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/a78fabca-81ff-4289-8156-529b4389d38e" width="400"/>
+      <img src="https://github.com/user-attachments/assets/7dd9fb53-0556-4879-9b5f-e6c8b2b83335" width="400"/>
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/49cbc21f-9c7f-4e2b-8a79-9d0f71ed7abf" width="400"/>
+      <img src="https://github.com/user-attachments/assets/fc1f11b6-8dab-45c1-ae70-8c1e6666ff34" width="400"/>
     </td>
   </tr>
 </table>
