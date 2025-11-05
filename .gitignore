@@ -1,0 +1,22 @@
+# 构建目录
+build/
+# CMake 生成文件
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+# Visual Studio 编译产物
+*.o
+*.exe
+*.pdb
+*.lib
+*.dll
+.vs/
+*.vcxproj*
+*.sln
+# Build outputs
+build/
+*.pdb
+*.lib
+*.ipch
+*.vs/

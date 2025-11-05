@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Lite3DReg | Lightweight 3D Point Cloud Registration</title>
+    <meta
+      name="description"
+      content="Lite3DReg is a lightweight, modern C++ library for real-time 3D point cloud registration, inspired by ShapeOp."
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <div class="brand">
+          <span class="brand__logo">Lite3DReg</span>
+        </div>
+        <div class="nav__links">
+          <a href="#features">Features</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#docs">Docs</a>
+          <a href="#community">Community</a>
+        </div>
+        <div class="nav__cta">
+          <a class="btn btn--ghost" href="#get-started">Get Started</a>
+          <a
+            class="btn btn--primary"
+            href="https://github.com/duanbotu123/project1"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </nav>
+      <div class="hero__content">
+        <div class="hero__copy">
+          <h1>Lite3DReg</h1>
+          <p>
+            Lite3DRegLib is a lightweight (&#60;0.3&nbsp;MB) 3D point cloud and mesh
+            registration toolkit with mirrored Python and C++ APIs. Blend
+            research-grade rigid and non-rigid solvers with interactive Gradio
+            tools for robotics, vision, and digital twin workflows.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#get-started">Download</a>
+            <a
+              class="btn btn--ghost"
+              href="https://huggingface.co/spaces/Lightweight3DRegLib/Lite3DReg"
+              target="_blank"
+              rel="noopener"
+              >See Live Demo</a
+            >
+          </div>
+          <dl class="hero__stats">
+            <div>
+              <dt>MIT open source</dt>
+              <dd>Permissive license ready for research or production</dd>
+            </div>
+            <div>
+              <dt>Rigid + Non-rigid</dt>
+              <dd>Fast-Robust-ICP and SPARE-driven alignment modes</dd>
+            </div>
+            <div>
+              <dt>Gradio studio</dt>
+              <dd>Real-time tuning on Hugging Face Spaces</dd>
+            </div>
+            <div>
+              <dt>Unified APIs</dt>
+              <dd>Composable C++ and Python interfaces for every pipeline stage</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="fusion">
+            <div class="cloud cloud--source">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="fusion__path"></div>
+            <div class="cloud cloud--target">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="features" class="section section--light">
+        <div class="section__header">
+          <h2>Key capabilities at a glance</h2>
+          <p>
+            A compact, robust,
+            and user-friendly lib for modern 3D registration tasks.
+          </p>
+        </div>
+        <div class="grid grid--features">
+          <article class="feature">
+            <div class="feature__icon feature__icon--solver"></div>
+            <h3>Lightweight</h3>
+            <p>
+              Core source stays under 0.3&nbsp;MB, ships under MIT, and drops
+              cleanly into research or production trees.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon feature__icon--fusion"></div>
+            <h3>Efficient &amp; robust</h3>
+            <p>
+              Fast-Robust-ICP and SPARE solvers help Lite3DRegLib outperform
+              baseline ICP and CPD in speed and resilience.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon feature__icon--realtime"></div>
+            <h3>Interactive exploration</h3>
+            <p>
+              The Gradio-powered interface on Hugging Face lets you tweak
+              parameters, inspect residuals, and reset defaults live.
+            </p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon feature__icon--pipeline"></div>
+            <h3>Accessible APIs</h3>
+            <p>
+              Unified Python and C++ bindings with curated datasets keep Windows
+              and Linux experimentation straightforward.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="live-demo" class="section section--demo">
+        <div class="section__header">
+          <h2>Visualization  interactively</h2>
+          <p>
+            Launch the Hugging Face Space to adjust registration parameters via
+            dropdowns, explore example datasets, and reset to curated defaults
+            while watching convergence unfold.
+          </p>
+        </div>
+        <div class="demo__panel">
+          <div class="demo__screen">
+            <img class="demo__image" src="111.gif" alt="Interactive 3D registration demo" />
+          </div>
+          <div class="demo__legend">
+            <div>
+              <h3>3D interaction tools</h3>
+              <p>
+                Spin, zoom,
+                and compare rigid/non-rigid outputs in the same Gradio canvas.
+              </p>
+            </div>
+            <div class="legend__stats">
+              <div>
+                <span class="legend__label">Camera</span>
+                <span class="legend__value">Orbit &amp; zoom</span>
+              </div>
+              <div>
+                <span class="legend__label">Hover</span>
+                <span class="legend__value">index &amp; coordinates</span>
+              </div>
+              <div>
+                <span class="legend__label">Controls</span>
+                <span class="legend__value legend__value--good">Reset &amp; save</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="modes" class="section section--light">
+        <div class="section__header">
+          <h2>Registration result</h2>
+        </div>
+        <div class="media-block">
+          <div class="media-block__intro">
+            <h3>Rigid registration</h3>
+            <p>
+              Powered by Fast-Robust-ICP
+              <a
+                class="badge-link"
+                href="https://arxiv.org/abs/2007.07627"
+                target="_blank"
+                rel="noopener"
+                ><img src="https://img.shields.io/badge/IEEE-2022-blue" title="IEEE 2022"/></a
+              >
+              for resilient alignment across noisy captures.
+            </p>
+          </div>
+          <div class="media-grid media-grid--two">
+            <figure class="media-grid__item">
+              <img src="1.gif" alt="Rigid registration overlay example 1" />
+            </figure>
+            <figure class="media-grid__item">
+              <img src="2.gif" alt="Rigid registration overlay example 2" />
+            </figure>
+          </div>
+        </div>
+        <div class="media-block media-block--nonrigid">
+          <div class="media-block__intro">
+            <h3>Non-rigid registration</h3>
+            <p>
+              SPARE-based deformation
+              <a
+                class="badge-link"
+                href="https://arxiv.org/abs/2405.20188"
+                target="_blank"
+                rel="noopener"
+                ><img src="https://img.shields.io/badge/IEEE-2025-blue" title="IEEE 2025"/></a
+              >
+              matches expressive meshes and scanned humans with impressive
+              fidelity.
+            </p>
+          </div>
+          <div class="media-grid media-grid--four">
+            <figure class="media-grid__item">
+              <img src="3.png" alt="Non-rigid registration example 1" />
+            </figure>
+            <figure class="media-grid__item">
+              <img src="4.png" alt="Non-rigid registration example 2" />
+            </figure>
+            <figure class="media-grid__item">
+              <img src="5.png" alt="Non-rigid registration example 3" />
+            </figure>
+            <figure class="media-grid__item">
+              <img src="6.png" alt="Non-rigid registration example 4" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="docs" class="section section--light">
+        <div class="section__header">
+          <h2>Build, integrate, and deploy fast</h2>
+          <p>
+             Dependencies, compilation routes, and the
+             C++/Python interfaces that  Lite3DRegLib provide.
+          </p>
+        </div>
+        <div class="grid grid--docs">
+          <article class="doc-card">
+            <h3>Dependencies &amp; build</h3>
+            <ul>
+              <li>Eigen&nbsp;3.4.0</li>
+              <li>OpenMesh&nbsp;8.1</li>
+              <li>Optional (Linux): Intel MKL for accelerated solvers</li>
+            </ul>
+            <pre><code class="language-bash">pip install numpy gradio plyfile trimesh plotly</code></pre>
+            <pre><code class="language-bash">cd scripts
+./compile.sh  # builds library + Lightweight3DRegDemo.exe</code></pre>
+          </article>
+          <article class="doc-card">
+            <h3>C++ interface</h3>
+            <pre><code class="language-cpp">RigidFricpRegistration* rigid;
+NonrigidSpareRegistration* spare;
+
+rigid->Reg(target_file, source_file, outpath);
+spare->Reg(target_file, source_file, outpath);
+
+rigid->Paras_init(use_init=false, file_init="", max_iter=80, stop=1e-5);
+spare->Paras_init(30, 1e-3, 1e-4, false, {}, {});
+
+rigid->Read_data(target_points, source_points, target_normals, source_normals);
+spare->Read_data(target_points, source_points, target_normals, source_normals);
+
+rigid->Register();
+spare->Register();
+
+rigid->Output_data(outpath, "rigid");
+spare->Output_data(outpath, "spare");</code></pre>
+          </article>
+          <article class="doc-card">
+            <h3>Python interface</h3>
+            <pre><code class="language-python">import pyregister as l3dr
+
+rigid = l3dr.RigidFricpRegistration()
+spare = l3dr.NonrigidSpareRegistration()
+
+rigid.Reg("data/target.ply", "data/source.ply", "./out/rigid/")
+spare.Reg("data/target.obj", "data/source.obj", "./out/spare/")
+
+rigid.Paras_init(useinit=False, fileinit="", maxiter=80, stop=1e-5)
+spare.Paras_init(iters=30, stopcoarse=1e-3, stopfine=1e-4,
+                 uselandmark=False, src=[], tar=[])
+
+rigid.Paras_init(); spare.Paras_init()
+
+rigid.Read_data(target_p, source_p, target_n, source_n)
+spare.Read_data(target_p, source_p, target_n, source_n)
+
+rigid.Register(); spare.Register()
+
+rigid.Output_data("./out/rigid/", "rigid")
+spare.Output_data("./out/spare/", "spare")</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section id="community" class="section section--dark">
+        <div class="section__header">
+          <h2>Applications powered by Lite3DRegLib</h2>
+          <p>
+            Blend rigid and non-rigid pipelines to support robotics, cultural
+            heritage, healthcare, and any workflow that relies on precise 3D
+            alignment.
+          </p>
+        </div>
+        <div class="grid grid--quotes">
+          <figure class="quote">
+            <blockquote>
+              Autonomous fleets stabilize lidar and depth sweeps in real time,
+              feeding SLAM loops with centimeter-level poses for navigation and
+              mapping.
+            </blockquote>
+            <figcaption>Autonomous robotics &amp; SLAM</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>
+              Digital twin and cultural heritage projects register terrestrial
+              scans, photogrammetry meshes, and drone captures into unified
+              asset vaults.
+            </blockquote>
+            <figcaption>Industrial &amp; heritage digitization</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>
+              Medical imaging teams align anatomical scans and deformable
+              surfaces to study motion, build patient-specific models, and track
+              treatment progress.
+            </blockquote>
+            <figcaption>Healthcare &amp; biomechanics</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="architecture" class="section section--dark">
+        <div class="section__header">
+          <h2>Inside the Lite3DRegLib stack</h2>
+          <p>
+            The repository layout keeps core solvers, bindings, and tooling
+            cleanly separated so you can adopt only the layers you need.
+          </p>
+        </div>
+        <div class="grid grid--columns">
+          <div class="diagram">
+            <div class="diagram__layer">
+              <span class="diagram__badge">01</span>
+              <div>
+                <h3>cpp/ core</h3>
+                <p>
+                  Modern C++ solvers implementing Fast-Robust-ICP and SPARE
+                  algorithms with Eigen and templated utilities.
+                </p>
+              </div>
+            </div>
+            <div class="diagram__layer">
+              <span class="diagram__badge">02</span>
+              <div>
+                <h3>python/ bindings</h3>
+                <p>
+                  High-level API mirrors the C++ entry points, enabling quick
+                  notebooks, scripting, and Hugging Face deployments.
+                </p>
+              </div>
+            </div>
+            <div class="diagram__layer">
+              <span class="diagram__badge">03</span>
+              <div>
+                <h3>examples/ &amp; data</h3>
+                <p>
+                  Sample datasets, reference pipelines, and walkthroughs for
+                  rigid and non-rigid registration experiments.
+                </p>
+              </div>
+            </div>
+            <div class="diagram__layer">
+              <span class="diagram__badge">04</span>
+              <div>
+                <h3>Gradio app.py</h3>
+                <p>
+                  Ready-to-run visualization in Gradio with parameter controls,
+                  reset actions, and live residual monitoring.
+                </p>
+              </div>
+            </div>
+          </div>
+          <aside class="callout">
+            <div class="diagram__layer callout__layer">
+              <span class="diagram__badge">05</span>
+              <div>
+                <h3>3rd_party &amp; cmake</h3>
+                <p>
+                  Keep dependencies scoped for Windows and Linux builds with
+                  curated `apt.txt` and `requirements.txt` guidance.
+                </p>
+              </div>
+            </div>
+            <div class="diagram__layer callout__layer">
+              <span class="diagram__badge">06</span>
+              <div>
+                <h3>Deterministic replays</h3>
+                <p>
+                  Reproduce registration runs step-by-step to debug pipelines
+                  and validate solver changes.
+                </p>
+              </div>
+            </div>
+            <div class="diagram__layer callout__layer">
+              <span class="diagram__badge">07</span>
+              <div>
+                <h3>MIT licensing</h3>
+                <p>
+                  Adopt Lite3DRegLib commercially or in research with permissive
+                  MIT terms and attribution-ready assets.
+                </p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="get-started" class="section section--cta">
+        <div class="cta">
+          <h2>Ready to align your world?</h2>
+          <p>
+            Explore, align, and deploy with Lite3DRegLib.
+          </p>
+          <div class="cta__actions">
+            <a
+              class="btn btn--primary"
+              href="https://github.com/duanbotu123/project1"
+              target="_blank"
+              rel="noopener"
+              >Explore on GitHub</a
+            >
+            <a
+              class="btn btn--ghost"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=yuxinyao@cityu.edu.hk"
+              rel="noopener"
+              >Talk to us</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">Lite3DReg</div>
+      <div class="footer__meta">
+        <span>© <span id="year"></span> Lite3DReg contributors.</span>
+        <a href="mailto:team@lite3dreg.dev">Contact</a>
+        <a
+          href="https://github.com/duanbotu123/project1"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
+        >
+        <a
+          href="https://github.com/duanbotu123/project1/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener"
+          >MIT License</a
+        >
+        <a href="#docs">Documentation</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+

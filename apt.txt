@@ -1,0 +1,16 @@
+
+build-essential
+cmake
+g++
+git
+wget
+curl
+make
+pkg-config
+libeigen3-dev
+libopenmesh-dev
+pybind11-dev
+python3-dev
+python3-pip
+
+
