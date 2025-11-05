@@ -23,8 +23,7 @@ Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh
   
 - Easy and Flexible:Lite3DRegLib provides an interactive interface through Gradio, making it easy for users to visualize 3D registration results in real time. Users can conveniently adjust parameters and settings to explore different configurations, experiment with example datasets, and fine-tune the alignment process, all without writing additional code.
 
-![1](https://github.com/user-attachments/assets/ca99ec1f-3ca9-490f-8fe9-12ae599edc58)
-![2](https://github.com/user-attachments/assets/d0f332f5-80b9-4ea8-bc76-d19ca263e4d3)
+
 
 
 ### Rigid registration [![arXiv](https://img.shields.io/badge/arXiv-2007.07627-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2007.07627)
@@ -40,11 +39,7 @@ Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh
   </tr>
 </table>
 
-<img width="882" height="784" alt="3" src="https://github.com/user-attachments/assets/220f4a79-221a-4350-86d9-2c633b56d6b2" />
 
-<img width="1090" height="1124" alt="4" src="https://github.com/user-attachments/assets/ffb851c7-a504-442b-8c08-419968203618" />
-<img width="906" height="1098" alt="5" src="https://github.com/user-attachments/assets/7dd9fb53-0556-4879-9b5f-e6c8b2b83335" />
-<img width="972" height="1074" alt="6" src="https://github.com/user-attachments/assets/fc1f11b6-8dab-45c1-ae70-8c1e6666ff34" />
 
 ### Non-rigid registration [![arXiv](https://img.shields.io/badge/arXiv-2405.20188-b31b1b.svg?style=flat-square)](https://arxiv.org/abs/2405.20188)
 
