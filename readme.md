@@ -11,7 +11,7 @@
 
 #### Lightweight lib for 3D rigid registration and non-registration with robustness and efficiency
 Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh registration library supporting both rigid and non-rigid alignment. It is designed for research and educational purposes, while also serving as a solid foundation for developing advanced 3D applications. Compared to existing geometry and registration libraries (such as  [PCL ](https://pointclouds.org/),[Open3D](http://www.open3d.org/)), Lite3DRegLib is designed to be lightweight while using modern, high-performance, and robust registration algorithms, enabling fast and reliable 3D point cloud and mesh alignment.Designed to be accessible for beginners or users who only need registration results, Lite3DRegLib also includes interactive visualization and user-friendly tools via Gradio, making it easier to explore, analyze, and experiment with 3D data.
-<a href="https://huggingface.co/spaces/Lightweight3DRegLib/Lite3DReg">
+<a href="https://huggingface.co/spaces/USTC3DVer/Lite3DReg">
   <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange">
 </a>
 
