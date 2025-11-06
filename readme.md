@@ -67,12 +67,13 @@ Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh
 ## Huggingface & Gradio Visualization
 
 Huggingface Space:
-<a href="https://huggingface.co/spaces/Lightweight3DRegLib/Lite3DReg">
+<a href="https://huggingface.co/spaces/USTC3DVer/Lite3DReg">
 <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange">
 </a>
 
 Interactive Interface:
-<img width="2544" height="1288" alt="image" src="https://github.com/user-attachments/assets/36f71981-2493-48be-9eed-11435a2c3e43" />
+
+<img width="2094" height="1270" alt="image" src="https://github.com/user-attachments/assets/81d50639-ffd9-44a2-995a-3bebc664cc8c" />
 
 You can adjust the registration parameters using the dropdown menus, and click the Reset to Default Parameters button to revert all settings to their default values.
 
