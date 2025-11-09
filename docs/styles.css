@@ -15,7 +15,7 @@
   --radius-lg: 32px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
 }
 
