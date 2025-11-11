@@ -41,7 +41,7 @@ Lite3DRegLib, with Python and C++ APIs, is a lightweight 3D point cloud and mesh
 
 
 
-### Non-rigid registration [![IEEE 2025](https://img.shields.io/badge/IEEE_2025-00629B.svg?style=flat-square&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/3598630)  
+### Non-rigid registration [![IEEE 2025](https://img.shields.io/badge/IEEE_2025-00629B.svg?style=flat-square&logo=ieee&logoColor=white)](https://arxiv.org/abs/2405.20188)
 
 <table>
   <tr>
