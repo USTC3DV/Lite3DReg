@@ -531,7 +531,7 @@ with gr.Blocks(css=CSS_FIX) as demo:
                         placeholder="e.g. 7,42,105", interactive=True)
 
                     with gr.Row():
-                        start_landmark_btn = gr.Button("Start Landmark Selection", elem_classes="primary")
+                        start_landmark_btn = gr.Button("Start Landmark Selection", elem_classes="primary",visible=False)
                         highlight_btn = gr.Button("Highlight Landmarks")
                         clear_landmark_btn = gr.Button("🧹 Clear Selections")
 
