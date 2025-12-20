@@ -71,34 +71,38 @@ a {
   border-color: rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.1);
 }
-/* Hugging Face 专属渐变按钮样式 */
+/* 确保这段代码放在 :root 和 .btn 定义之后 */
+
 .btn--huggingface {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
-    font-weight: 600;
-    border-radius: 8px;
+    padding: 0.75rem 1.8rem; /* 保持与其他按钮一致的间距 */
+    font-weight: 700;
+    border-radius: 999px !important; /* 强制圆角与其他按钮统一 */
     text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none !important; /* 强制取消边框 */
     cursor: pointer;
     
-    /* 经典黄色渐变背景 */
-    background: linear-gradient(135deg, #FFD21E 0%, #FF9D00 100%);
-    color: #000 !important; /* 黑色文字在黄色背景上可读性最高 */
-    box-shadow: 0 4px 15px rgba(255, 157, 0, 0.3);
+    /* 强力渐变：从明黄到鲜橙 */
+    background: linear-gradient(135deg, #FFD21E 0%, #FF9D00 100%) !important;
+    background-size: 200% auto; /* 用于平滑动画 */
+    
+    color: #000000 !important; /* 强制黑色文字 */
+    box-shadow: 0 10px 25px rgba(255, 157, 0, 0.3);
+    z-index: 1;
 }
 
 .btn--huggingface:hover {
-    /* 悬停时稍微加深渐变并产生位移感 */
-    background: linear-gradient(135deg, #FFDB4D 0%, #FFB02E 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 157, 0, 0.4);
+    background-position: right center; /* 悬停时渐变色移动 */
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 157, 0, 0.45);
+    color: #000000 !important;
 }
 
 .btn--huggingface:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
 }
 .hero {
   position: relative;
