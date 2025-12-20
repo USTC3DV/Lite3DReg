@@ -71,7 +71,35 @@ a {
   border-color: rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.1);
 }
+/* Hugging Face 专属渐变按钮样式 */
+.btn--huggingface {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    
+    /* 经典黄色渐变背景 */
+    background: linear-gradient(135deg, #FFD21E 0%, #FF9D00 100%);
+    color: #000 !important; /* 黑色文字在黄色背景上可读性最高 */
+    box-shadow: 0 4px 15px rgba(255, 157, 0, 0.3);
+}
 
+.btn--huggingface:hover {
+    /* 悬停时稍微加深渐变并产生位移感 */
+    background: linear-gradient(135deg, #FFDB4D 0%, #FFB02E 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 157, 0, 0.4);
+}
+
+.btn--huggingface:active {
+    transform: translateY(0);
+}
 .hero {
   position: relative;
   background: radial-gradient(circle at top left, rgba(124, 92, 255, 0.18), transparent 45%),
